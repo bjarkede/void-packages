@@ -15,9 +15,6 @@ distfiles="https://github.com/premake/premake-core/archive/refs/tags/v${version}
 checksum=ed52d17463112d6b93bc6e34bb6e15c6332e1f313ad5259fdde60e270aa30aec
 
 do_build() {
-	pwd
-	ls -la
-	find . -name Bootstrap.mak -o -name premake5.lua
 	make -f Bootstrap.mak linux
 	bin/release/premake5 gmake
 	bin/release/premake5 embed
